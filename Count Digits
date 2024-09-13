@@ -1,0 +1,14 @@
+int evenlyDivides(int N){
+        //code 
+        int count = 0;
+        int y=N;
+        int temp =0;
+        while(N){
+            temp=N%10;
+            if(temp != 0  && y%temp ==0 ){
+                count++;
+            }
+            N/=10;
+        }
+        return count;
+    }
