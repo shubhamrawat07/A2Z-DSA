@@ -1,0 +1,21 @@
+string str;
+    bool pal(int l,int r){
+        if(l>=r){
+            return true;
+        }
+        if(!isalnum(str[l])){
+            return pal(l+1,r);
+        }
+        if(!isalnum(str[r])){
+            return pal(l,r-1);
+        }
+        else if(toupper(str[l])==toupper(str[r])){
+            return pal(l+1,r-1);
+        }
+        else
+            return false;
+    }
+    bool isPalindrome(string s) {
+        str= s;
+        return pal(0,s.size()-1);
+    }
