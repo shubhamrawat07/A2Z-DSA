@@ -1,0 +1,14 @@
+int count =1;
+    void printNos(int N)
+    {
+        //Your code here
+        if(count>=N){
+            cout<<count<<" ";
+            return;
+        }
+        cout<<count++<<" ";
+        printNos(N);
+        
+        
+        
+    }
