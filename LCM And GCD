@@ -14,3 +14,7 @@ vector<long long> lcmAndGcd(long long A , long long B) {
         lcm = (A*B)/gcd;
         return {lcm, gcd};
     }
+
+OR
+
+return {(A*B)/__gcd(A,B),__gcd(A,B)};
