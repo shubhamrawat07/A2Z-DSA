@@ -1,0 +1,14 @@
+int l=0, ans=0;
+        long x=0;
+        int n=nums.size();
+        sort(nums.begin(),nums.end());
+        for(int r=0;r<n;r++){
+            long t = nums[r];
+            x+=t;
+            while((r-l+1)*t - x > k){
+                x-=nums[l++];
+            }
+            ans=max(ans,r-l+1);
+        }
+        return ans;
+        
