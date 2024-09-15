@@ -1,0 +1,15 @@
+int print2largest(vector<int> &arr) {
+        // Code Here
+        int max=arr[0];
+        for(int i=1;i<arr.size();i++){
+            if(arr[i]>max)
+                max=arr[i];
+        }
+        int smax=-1;
+        for(int i=0;i<arr.size();i++){
+            if(arr[i] < max && arr[i] > smax){
+                smax=arr[i];
+            }
+        }
+        return smax;
+    }
