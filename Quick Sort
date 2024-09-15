@@ -1,0 +1,30 @@
+public:
+    //Function to sort an array using quick sort algorithm.
+    void quickSort(int arr[], int low, int high)
+    {
+        // code here
+        if(low<high){
+           int p = partition(arr,low,high);
+           quickSort(arr,low,p-1);
+           quickSort(arr,p+1,high);
+           
+       }
+    }
+    
+    public:
+    int partition (int arr[], int l, int r)
+    {
+       // Your code here
+       int pivot=arr[r];
+    int i=l-1;
+    for(int j=l;j<=r-1;j++)
+    {
+        if(arr[j]<pivot)
+        {
+            i++;
+            swap(arr[i],arr[j]);        
+        }
+    }
+    swap(arr[i+1],arr[r]);
+    return (i+1);
+    }
